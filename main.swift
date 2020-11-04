@@ -24,9 +24,9 @@ class Staff: Person {
 
 class Faculty: Staff {
   let department: String
-  var handlingSubjects: [String]
+  var handlingSubjects= [String]()
   var isMentor: Bool
-  var menteeList = [Student]
+  var menteeList = [Student]()
   var anySpecialRole: String?
   var experience: Float
 
@@ -85,9 +85,9 @@ class College {
   var collegeID: String
   var principalName: String
   var details: String
-  var branches: [Branch]
-  var staffs: [Staff]
-  var students: [Student]
+  var branches= [Branch]()
+  var staffs= [Staff]()
+  var students= [Student]()
   
   init(name: String, collegeID: String, principalName: String, details: String, branches: [Branch], staffs: [Staff], students: [Student]) {
       
@@ -141,11 +141,11 @@ class Branch {
     // faculty handingSubjectsmust match for perticular subjct and max 2 subject for a faculty
   }
    
-  func condutExam() {
+  func conductExam() {
     // question papaer should be checked and distributed for all the students
   }
 
-  func attandaceDetail(student: Student) {
+  func attendaceDetail(student: Student) {
     // attandacedetail every student should be stored
     // Student have only access to read the data not modify
   }
@@ -155,8 +155,10 @@ class Branch {
 }
 
 class University: College {
-  var listOfCollages: [String: Collage]
-
+  var listOfCollages = [String: Collage]()
+	init(){
+		self.listOfCollages = [" ":]
+	}
 
   func setSemesterTimetable() {
     // set semester timetable of all the branches and courses
