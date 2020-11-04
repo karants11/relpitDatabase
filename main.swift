@@ -131,7 +131,7 @@ class Branch {
   var students: [String: Student]
   var staffs: [Staff]
 
-  init(headOfDepartment: String, students: [String: Student], staffs: [Staff] ){
+  init(headOfDepartment: String, students: [String: Student], staffs: [Staff]){
     self.headOfDepartment = headOfDepartment
     self.students = students
     self.staffs = staffs
@@ -184,4 +184,11 @@ let student002 =  Student(name: "MNO", age: 21,  usnNumber: "4su16ec002", curren
 let staff1 = Staff(name: "XYZ", age: 35, isTeaching: false, designation: "Lab Assistant", qualification: "Degree")
 let staff1 = Staff(name: "MKJ", age: 45, isTeaching: false, designation: "Lab supervisor", qualification: "Degree")
 
-let faculty1 = Faculty(name: "Dr. ABC", age: 42, department: "EC", handlingSubjects: ["NA", ], isMentor: Bool, menteeList = [Student], anySpecialRole: String?, experience: Float)
+let faculty1 = Faculty(name: "Dr. ABC", age: 42, department: "EC", handlingSubjects: ["NA", "FT"], isMentor: true, menteeList = [student001, student002], anySpecialRole: "Nss Coordinstor", experience: 5.5)
+let faculty2 = Faculty(name: "Dr. DEC", age: 45, department: "EC", handlingSubjects: ["NA", "FT", "AE"], isMentor: true, menteeList = [student001, student002], anySpecialRole: nil, experience: 7.5)
+
+let branch1 = Branch(headOfDepartment: "Dr. EC", students: ["16ec001": student001, "16ec001": student002], staffs: [staff1, staff2])
+let branch1 = Branch(headOfDepartment: "Dr. CS", students: ["16ec001": student001, "16ec001": student002], staffs: [staff1, staff2])
+
+
+let sdmCollage = Collage(name: "SDMIT", collegeID: "4SU16", principalName: "DR. HAHAHA", details: "Ujre", branches: [branch1, branch2], staffs: [staff1, staff2], students: [student001, student002])
