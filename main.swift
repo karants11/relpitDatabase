@@ -68,5 +68,23 @@ class Faculty: Staff {
   var isMentor: Bool
   var menteeList = [Student]
 
-  init()
+  init(name: String, age: Int, department: String, handingSubjects: [String], isMentor: Bool, menteeList = [Student]) {
+    self.department = department
+    self.handingSubjects = handingSubjects
+    self.isMentor = isMentor
+    self.menteeList = menteeList
+    super.init(name: name, age: age)
+  }
+
+  func guideMentees() {
+    // menteeList is the list of students required
+    // guide and mentor mentees
+    // keep track on their performance
+  }
+
+  func evaluateExamPapers(sutdents: [Student]) {
+    // evaluate exam sheets of individual students and allot marks
+    // giving CE marks for individual Student
+  }
+  
 }
