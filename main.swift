@@ -62,3 +62,11 @@ class Staff: Person {
   }
 }
 
+class Faculty: Staff {
+  let department: String
+  var handingSubjects: [String]
+  var isMentor: Bool
+  var menteeList = [Student]
+
+  init()
+}
